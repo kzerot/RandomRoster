@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %} New Character {% end %}
+
+ {% block inpage_script %} 
+    <script type="text/javascript">
+         $( document ).ready(function() {
+            $('#create').click(function() {
+                console.log('CLICK!')
+                $.ajax({
+                  type: "POST",
+                  url: "createcharacter",
+                  data: JSON.stringify({ name: $('#name_input').val(), world:  $('#world_input').val() }),
+                  dataType: "json"
+                }).done(function( msg ) {
+                    console.log('DONE');
+                    if (msg.result != null && msg.result && msg.char_id != undefined)
+                        window.location.replace("/characters/"+msg.char_id);
+                    else
+                        $('#name_input').val("");
+                  })
+                .fail(function (msg) {
+                    console.log('ERROR');
+                    $('#name_input').val("error");
+                });
+            });
+         });
+    </script>
+ {% end %}
+
+{% block content %}
+  <div class='content'>
+    <select name="worlds" id="world_input">
+        {% for world in worlds %}
+            <option value="{{world.id}}">{{world.name}}</option>
+        {% end %}
+   </select>
+    <input type="text" name="name" value="" placeholder="Name" id="name_input">
+    <input type="button" name="" value="Create!" id="create">
+  </div>
+{% end %}

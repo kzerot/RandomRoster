@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% autoescape None %}
+{% block title %}{{ escape(character.name) }}{% end %}
+
+{% block content %}
+  <div class='content'>
+    
+    {{ character.GenerateHtml() }}
+    
+  </div>
+{% end %}

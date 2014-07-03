@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}{{ escape(world.name) }}{% end %}
+
+{% block content %}
+  <div class='content'>
+    <ul>
+    {% for char in characters %}
+        <li>{{ escape(char.name) }}</li>
+    {% end %}
+    </ul>
+  </div>
+{% end %}

@@ -1,0 +1,101 @@
+{
+    "type": "world",
+    "world": {
+
+    },
+    "character": {
+        "stats": {
+                "str": {"name": "Сила", "value": 5, "group": "Основные", "type": "editable", "order": 0},
+                "agl": {"name": "Ловкость", "value": 5, "group": "Основные", "type": "editable", "order": 1},
+                "luck": {"name": "Удача", "value": 5, "group": "Основные", "type": "editable", "order": 2},
+
+                "magic": {"name": "Вера", "alternative_name": "Мана", "value": 5, "group": "Боевые", "type": "editable", "order": 3},
+                "ws": {"name": "Умение сражаться", "value": 5, "group": "Боевые", "type": "editable", "order": 4},
+                "bs": {"name": "Умение стрелять", "value": 5, "group": "Боевые", "type": "editable", "order": 5},
+
+                "chr": {"name": "Оратор", "value": 5, "group": "Второстепенные", "type": "editable", "order": 6},
+                "trd": {"name": "Торговец", "value": 5, "group": "Второстепенные", "type": "editable", "order": 7},
+                "thf": {"name": "Ловкие руки", "value": 5, "group": "Второстепенные", "type": "editable", "order": 8},
+
+                "sled": {"name": "Следопыт", "value": 5, "group": "Профессии", "type": "editable", "order": 9},
+                "alch": {"name": "Алхимик", "value": 5, "group": "Профессии", "type": "editable", "order": 10},
+                "mech": {"name": "Механик", "value": 5, "group": "Профессии", "type": "editable", "order": 11},
+
+                "hp": {
+                    "name": "Здоровье", 
+                    "value": 10,
+                    "maxvalue": 10, 
+                    "type": "variable",
+                    "order": 12
+                },
+                "mp": {
+                    "name": "Вера", 
+                    "alternative_name": "Мана",
+                    "value": 10,
+                    "maxvalue": 10, 
+                    "type": "variable",
+                    "order": 13
+                },
+
+                "gold": { "name": "Монеты", "type": "currency", "order": 14 }
+
+        },
+        "slots": {
+            "back": {
+                "name": "Спина",
+                "size": 10
+            },
+            "belt1": {
+                "name": "Пояс",
+                "size": 5
+            },
+            "belt2": {
+                "name": "Пояс",
+                "size": 5
+            },
+            "baldric1": {
+                "name": "Перевязь",
+                "size": 3
+            },
+            "baldric2": {
+                "name": "Перевязь",
+                "size": 3
+            },
+            "baldric3": {
+                "name": "Перевязь",
+                "size": 3
+            },
+
+            "potionbelt1": {
+                "name": "Поясная сумка",
+                "size": 1
+            },
+            "potionbelt2": {
+                "name": "Поясная сумка",
+                "size": 1
+            },
+            "potionbelt3": {
+                "name": "Поясная сумка",
+                "size": 1
+            },
+            "potionbelt4": {
+                "name": "Поясная сумка",
+                "size": 1
+            },
+            "potionbelt5": {
+                "name": "Поясная сумка",
+                "size": 1
+            },
+            "potionbelt6": {
+                "name": "Поясная сумка",
+                "size": 1
+            }
+        },
+        "inventory": {
+            "type": "weight",
+            "volume": 0,
+            "formula": "str*10"
+        }
+    }
+
+}
